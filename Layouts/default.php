@@ -33,13 +33,14 @@
 				<?php $this->Bootstrap4->homeImage() ?>
 			</div>
 		</div>
-	<?php else: ?>
-		<!-- /Elements/crumbs.php -->
-		<?php $this->BcBaser->crumbsList(); ?>
 	<?php endif ?>
 	<div class="container my-5">
 	<div class="row">
 		<div class="col-md-9">
+			<?php if(!$this->BcBaser->isHome()): ?>
+				<!-- /Elements/crumbs.php -->
+				<?php $this->BcBaser->crumbsList(); ?>
+			<?php endif; ?>
 			<?php $this->BcBaser->flash() ?>
 			<?php $this->BcBaser->content() ?>
 			<!-- /Elements/contents_navi.php -->

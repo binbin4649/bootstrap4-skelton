@@ -8,10 +8,10 @@
 ?>
 
 
-<div id="Crumbs">
+<div class="mb-3">
 <?php
 if ($this->BcBaser->isHome()) {
-	echo '<strong>'. __('ホーム').'</strong>';
+	echo __('ホーム');
 } else {
 	$crumbs = $this->BcBaser->getCrumbs();
 	if (!empty($crumbs)) {
@@ -23,7 +23,7 @@ if ($this->BcBaser->isHome()) {
 			}
 			if ($this->BcArray->last($crumbs, $key)) {
 				if ($this->viewPath != 'home' && $crumb['name']) {
-					$this->BcBaser->addCrumb('<strong>' . $crumb['name'] . '</strong>');
+					$this->BcBaser->addCrumb($crumb['name']);
 				}
 			} else {
 				$this->BcBaser->addCrumb($crumb['name'], $crumb['url']);
