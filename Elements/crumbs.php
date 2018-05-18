@@ -9,6 +9,7 @@
 
 
 <div class="mb-3">
+<small>
 <?php
 if ($this->BcBaser->isHome()) {
 	echo __('ホーム');
@@ -38,4 +39,5 @@ if ($this->BcBaser->isHome()) {
 	$this->BcBaser->crumbs(' &gt; ', __('ホーム'));
 }
 ?>
+</small>
 </div>
